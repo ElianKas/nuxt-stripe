@@ -6,7 +6,7 @@ const stripe = new Stripe(
 const domain = 'http://localhost:3000';
 
 export default defineEventHandler(async (event) => {
-	const body = await readBody(event);
+	/* const body = await readBody(event); */
 	const session = await stripe.checkout.sessions.create({
 		line_items: [
 			{
